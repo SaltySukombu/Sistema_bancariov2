@@ -31,11 +31,13 @@ def criar_usuario (usuarios):
     nome = input("Digite o seu nome: ").lower()
     data_nascimento = int(input("Digite sua data de nascimento (em formato dd-mm-aaaa): "))
     endereco = float("Digite o seu endereço (em forato de: logradouro, número-bairro-cidade/sigla do estado): ")
+
 def filtrar_usuario(cpf, usuarios):
-    
+    usuarios = ("",)
+    cpfs = ("",)
 
 def criar_conta(agencia, numero_conta, usuarios):
-    #complete o código
+    
 
 def listar_contas(contas):
     #complete o código
