@@ -29,18 +29,18 @@ def criar_usuario (usuarios):
         print("Este usuário já existe.")
         return
     nome = input("Digite o seu nome: ").lower()
-    data_nascimento = int(input("Digite sua data de nascimento (em formato dd-mm-aaaa): "))
-    endereco = float("Digite o seu endereço (em forato de: logradouro, número-bairro-cidade/sigla do estado): ")
+    data_nascimento = input("Digite sua data de nascimento (em formato dd-mm-aaaa): ")
+    endereco = input("Digite o seu endereço (em forato de: logradouro, número-bairro-cidade/sigla do estado): ")
 
 def filtrar_usuario(cpf, usuarios):
-    usuarios = ("",)
-    cpfs = ("",)
+    usuarios = [usuario for usuario in usuarios if usuario["cpf"] == cpf]
+    return usuarios[0] if usuarios else None
 
 def criar_conta(agencia, numero_conta, usuarios):
-    
+   
 
 def listar_contas(contas):
-    #complete o código
+    
 
 def main():
     LIMITE_SAQUES = 3
