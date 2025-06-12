@@ -37,7 +37,18 @@ def filtrar_usuario(cpf, usuarios):
     return usuarios[0] if usuarios else None
 
 def criar_conta(agencia, numero_conta, usuarios):
-   
+   cpf = input("Digite o CPF do titular da conta: ")
+   usuario = filtrar_usuario(cpf, usuarios)
+   if usuarios:
+       print("Conta criada com sucesso")
+       return {
+            "agência" == agencia,
+           "número da conta" == numero_conta,
+           "usuário" == usuario
+       }
+   else:
+       print("Usuário não encontrado. Não foi possível criar uma conta.")
+       return None
 
 def listar_contas(contas):
     
