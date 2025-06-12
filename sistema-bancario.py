@@ -122,6 +122,16 @@ def listar_contas(contas):
             elif opcao == "e":
                 exibir_extrato(saldo, extrato = extrato)
 
+            elif opcao == "nc":
+                criar_conta(AGENCIA, numero_conta, usuarios)
+                numero_conta += 1
+
+            elif opcao == "lc":
+                listar_contas(conta)
+
+            elif opcao == "nu":
+                criar_usuario(usuarios)
+
             elif opcao == "q":
                 break
     main()
