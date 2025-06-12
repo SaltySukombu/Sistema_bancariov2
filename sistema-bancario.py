@@ -39,19 +39,22 @@ def filtrar_usuario(cpf, usuarios):
 def criar_conta(agencia, numero_conta, usuarios):
    cpf = input("Digite o CPF do titular da conta: ")
    usuario = filtrar_usuario(cpf, usuarios)
-   if usuarios:
+   if usuario:
        print("Conta criada com sucesso")
        return {
-            "agência" == agencia,
-           "número da conta" == numero_conta,
-           "usuário" == usuario
+            "agência": agencia,
+           "número da conta": numero_conta,
+           "usuário": usuario
        }
    else:
        print("Usuário não encontrado. Não foi possível criar uma conta.")
        return None
 
 def listar_contas(contas):
-    
+    for conta in contas:
+        print(f"Número da agência é {conta['agencia']}")
+        print(f"Número da conta é {conta['numero_conta']}")
+        print(f"O titular é {conta['usuario']['nome']}")
 
 def main():
     LIMITE_SAQUES = 3
