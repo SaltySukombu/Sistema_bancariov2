@@ -124,7 +124,9 @@ def listar_contas(contas):
 
             elif opcao == "nc":
                 criar_conta(AGENCIA, numero_conta, usuarios)
-                numero_conta += 1
+                if conta:
+                    contas.append(conta)
+                    numero_conta += 1
 
             elif opcao == "lc":
                 listar_contas(conta)
