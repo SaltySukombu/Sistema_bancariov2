@@ -62,6 +62,8 @@ def criar_usuario (usuarios):
     nome = input("Digite o seu nome: ").lower()
     data_nascimento = input("Digite sua data de nascimento (em formato dd-mm-aaaa): ")
     endereco = input("Digite o seu endereço (em forato de: logradouro, número-bairro-cidade/sigla do estado): ")
+    usuarios.append({"nome":nome,"data_nascimento":data_nascimento,"cpf":cpf,"endereço":endereco})
+    print("usuario criado com sucesso")
 
 def filtrar_usuario(cpf, usuarios):
     usuarios = [usuario for usuario in usuarios if usuario["cpf"] == cpf]
@@ -121,7 +123,23 @@ def listar_contas(contas):
                      )
             elif opcao == "e":
                 exibir_extrato(saldo, extrato = extrato)
+            
+            elif opcao == "lc":
+                listar_contas(contas)
+            
+            elif opcao == "nu":
+                criar_usuario(usuarios)
+
+            elif opcao ==  "nc":
+                numero_conta = len (conta) +1
+                conta = criar_conta(AGENCIA,numero_conta,usuarios)
+
+                if conta:
+                    contas.append(conta)
 
             elif opcao == "q":
                 break
+
+            else:
+                print("opção invalida")
     main()
