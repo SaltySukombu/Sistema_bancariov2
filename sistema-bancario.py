@@ -130,11 +130,14 @@ def listar_contas(contas):
                     contas.append(conta)
 
             elif opcao == "lc":
-                listar_contas(conta)
+                listar_contas(contas)
 
             elif opcao == "nu":
                 criar_usuario(usuarios)
 
             elif opcao == "q":
                 break
+            
+            else:
+                print("Operação inválida, por favor selecione novamente a operação desejada.")
     main()
